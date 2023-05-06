@@ -8,7 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { SignInComponent } from './pages/register/register.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -21,7 +21,7 @@ import { AdminComponent } from './components/admin/admin.component';
     FeedComponent,
     HomeComponent,
     LoginComponent,
-    SignInComponent,
+    RegisterComponent,
     FooterComponent,
     SidebarComponent,
     ProfileComponent,
