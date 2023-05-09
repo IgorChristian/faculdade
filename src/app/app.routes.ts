@@ -1,8 +1,6 @@
 import { Routes, CanActivate } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
-import { 
-  AuthGuardService as AuthGuard 
-} from './services/auth/auth.guard';
+import { AuthGuardService as AuthGuard } from './services/auth/auth.guard';
 import { 
   RoleGuardService as RoleGuard 
 } from './services/auth/role-guard.service';
