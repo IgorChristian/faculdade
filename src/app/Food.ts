@@ -1,4 +1,4 @@
-export interface Food {
+export interface food {
     id: number,
     name: string,
     conteudo: string,

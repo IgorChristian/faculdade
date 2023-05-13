@@ -1,22 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { FoodService } from './food.service';
-import { response } from 'express';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  template: `<app-sidebar></app-sidebar>
+  <router-outlet></router-outlet>
+  `,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'faculdade';
 
-  constructor(private foodService: FoodService){}
-
-  obterTodasReceitas():void{
-    this.foodService.obterTodos().subscribe(response:Food[])=>{
-      this.foods = response;
-    }
-
-  }
+export class AppComponent {
 
 }

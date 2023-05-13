@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { API_PATH } from 'src/environment/environments';
-import { Food } from './food';
+import { food } from './food';
+/* import { interval, take, lastValueFrom } from 'rxjs'; */
 
 
 @Injectable({
@@ -16,7 +17,7 @@ export class FoodService {
   constructor(private httpClient: HttpClient) { }
 
   obterTodos () {
-    return this.httpClient.get<Food[]>(`${API_PATH}food`).toPromise()
+    return this.httpClient.get<food[]>(`${API_PATH}food`).toPromise()
   }
 
 }

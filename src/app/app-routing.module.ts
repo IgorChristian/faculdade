@@ -2,16 +2,27 @@ import { PathLocationStrategy } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { CadasReceitaComponent } from './components/cadas-receita/cadas-receita.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './services/auth/auth.guard';
+import { FeedComponent } from './components/feed/feed.component';
 
 const routes: Routes = [
 
   {
     path: 'home', component: HomeComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'feed', component: FeedComponent },
+      { path: 'cadas-receita', component: CadasReceitaComponent }
+    ]
   },
+
+ /* {
+    path:'cadas-receita', component:CadasReceitaComponent
+  },*/
+  
   {
     path:'login', component:LoginComponent
   },
@@ -21,11 +32,11 @@ const routes: Routes = [
   },
 
   { 
-    path: '', redirectTo: './pages/home', pathMatch: 'full'
+    path: '', redirectTo: 'login', pathMatch: 'full'
   },
 
   {
-    path:'**', component: HomeComponent
+    path:'**', component: LoginComponent
   },
 
 ];
