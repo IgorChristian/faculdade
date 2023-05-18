@@ -11,6 +11,7 @@ import { FoodService } from 'src/app/food.service';
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
+
 export class FeedComponent implements OnInit {
 obterTodasReceitas() {
 throw new Error('Method not implemented.');
@@ -23,21 +24,11 @@ throw new Error('Method not implemented.');
 
   ngOnInit() {
     const promise = this.foodService.obterTodasReceitas();
-    /*this.foods$ = from(promise);*/
-
-  /*obterTodasReceitas().void {
-      this.foodService.obterTodos().subscribe(response:food[])=>{
-      this.foods = response;*/
-  }
-  }
-/*
-  obterTodasReceitas():void{
-    this.foodService.obterTodos().subscribe(response:Food[])=>{
-      this.foods = response;
   }
 
-}*/
+  botaoFavoritos(){
+    window.alert('O botão Favoritos foi clicado!');
+  }
 
-function obterTodasReceitas() {
-  throw new Error('Function not implemented.');
 }
+

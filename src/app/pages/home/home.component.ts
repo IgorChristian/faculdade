@@ -8,6 +8,8 @@ import { FeedComponent } from 'src/app/components/feed/feed.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+
 export class HomeComponent {
 
 }

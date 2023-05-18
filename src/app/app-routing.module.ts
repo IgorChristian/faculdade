@@ -14,14 +14,11 @@ const routes: Routes = [
     path: 'home', component: HomeComponent,
     canActivate: [AuthGuard],
     children: [
+      { path: '', component: HomeComponent },
       { path: 'feed', component: FeedComponent },
       { path: 'cadas-receita', component: CadasReceitaComponent }
     ]
   },
-
- /* {
-    path:'cadas-receita', component:CadasReceitaComponent
-  },*/
   
   {
     path:'login', component:LoginComponent

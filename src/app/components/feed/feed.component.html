@@ -1,3 +1,28 @@
-<h3>Teste</h3>
-<button (click)="obterTodasReceitas()" >Obter Todos</button>
-<script src="/faculdade/src/app/components/feed/feed.component.ts"></script>
+<div class="">
+    <div class="font-bold self-center text-xl sm:text-3xl text-green-base-3">
+        Lasanha
+    </div>
+    
+    <div>
+        <img class="h-10 w-10 rounded-full" src="assets/classic-lasagna-with-bolognese-sauce.jpg" alt="">
+    </div>
+
+    <div>
+        <strong>Ingredientes:</strong>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <div class="flex w-full">
+            <button type="submit" class="flex mt-2 items-center justify-center focus:outline-none text-white text-sm sm:text-base  bg-gradient-to-r from-green-base-2 to-yellow-base hover:bg-green-500 rounded-2xl py-2 w-full transition duration-150 ease-in" (click)="obterTodasReceitas()">
+                <span class="mr-2 uppercase">Ver Receita</span>
+                <span>
+                    <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <button (click)="botaoFavoritos()">Favoritos</button>
+    </div>
+    <hr />
+    <script src="./feed.component.ts"></script>
+</div>
